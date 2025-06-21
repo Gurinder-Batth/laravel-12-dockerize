@@ -174,6 +174,7 @@
         
         <!-- Content Section -->
         <div class="max-w-lg text-center lg:text-left">
+            <h1>{{ strtoupper(env('APP_ENV')) }}</h1>
             <h1 class="text-4xl font-bold text-red-600 dark:text-red-400 mb-4">Welcome to Laravel 12</h1>
             <p class="text-lg text-gray-700 dark:text-gray-300 mb-6">
                 This is a modern Laravel 12 application setup with Tailwind CSS, Docker, Horizon, Redis, and MySQL. 
