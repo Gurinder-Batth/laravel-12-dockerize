@@ -9,7 +9,7 @@ services:
     ports:
       - ${PROD_APP_PORT}:80
     environment:
-      APP_ENV_FILE: "local"
+      APP_ENV_FILE: "stage"
     volumes:
       - ./src:/var/www/html
       - ./docker/apache/default.conf:/etc/apache2/sites-enabled/000-default.conf
