@@ -4,6 +4,9 @@ This guide provides instructions for setting up the project in different environ
 
 ![Local Screenshot](docs/local-screenshot.png)
 
+### Documentation Link
+[Laravel 12 Dockerize Documentation](https://gurinder-batth.github.io/laravel-12-dockerize/)
+
 ## Environments
 The project supports three environments:
 - **Local**: Uses `docker-compose.yml`
