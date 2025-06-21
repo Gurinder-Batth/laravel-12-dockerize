@@ -22,7 +22,7 @@
             top: 0;
         }
         .offcanvas-sidebar {
-            width: 280px !important;
+            width: 380px !important;
         }
         .sidebar .nav-link {
             color: #495057;
@@ -35,8 +35,12 @@
             color: #212529;
         }
         .sidebar .nav-link.active {
-            background-color: #0d6efd;
+            background-color: #f53103;
             color: #ffffff;
+        }
+
+        .nav-link {
+          color: #373737;
         }
         .content {
             padding: 2rem;
@@ -69,18 +73,22 @@
             }
             .menu-button {
                 display: block;
-                position: fixed;
+                position: relative;
                 top: 1rem;
                 left: 1rem;
-                z-index: 1050;
             }
+        }
+
+        .sidebar .nav-link.active {
+            background-color: #f53103;
+            color: #ffffff;
         }
     </style>
 </head>
 <body>
     <div class="container-fluid">
         <!-- Menu Button for Mobile -->
-        <button class="btn btn-primary menu-button" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebarOffcanvas" aria-controls="sidebarOffcanvas">
+        <button class="btn btn-danger menu-button" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebarOffcanvas" aria-controls="sidebarOffcanvas">
             ☰ Menu
         </button>
 
