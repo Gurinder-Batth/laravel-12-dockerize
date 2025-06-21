@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Documentation Hub</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8f9fa;
+        }
+        .sidebar {
+            background-color: #ffffff;
+            border-right: 1px solid #dee2e6;
+            padding: 2rem;
+            overflow-y: auto;
+            height: 100vh;
+            position: sticky;
+            top: 0;
+        }
+        .offcanvas-sidebar {
+            width: 280px !important;
+        }
+        .sidebar .nav-link {
+            color: #495057;
+            padding: 0.5rem 1rem;
+            border-radius: 0.25rem;
+            margin-bottom: 0.25rem;
+        }
+        .sidebar .nav-link:hover {
+            background-color: #e9ecef;
+            color: #212529;
+        }
+        .sidebar .nav-link.active {
+            background-color: #0d6efd;
+            color: #ffffff;
+        }
+        .content {
+            padding: 2rem;
+        }
+        .search-bar {
+            max-width: 400px;
+            margin-bottom: 2rem;
+        }
+        .document-card {
+            background-color: #ffffff;
+            border: 1px solid #dee2e6;
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .document-card h3 {
+            margin-bottom: 0.5rem;
+        }
+        .document-card .meta {
+            color: #6c757d;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+        .menu-button {
+            display: none;
+        }
+        @media (max-width: 767.98px) {
+            .sidebar {
+                display: none;
+            }
+            .menu-button {
+                display: block;
+                position: fixed;
+                top: 1rem;
+                left: 1rem;
+                z-index: 1050;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <!-- Menu Button for Mobile -->
+        <button class="btn btn-primary menu-button" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebarOffcanvas" aria-controls="sidebarOffcanvas">
+            ☰ Menu
+        </button>
+
+        <div class="row">
+            <!-- Sidebar -->
+            <div class="col-md-3 col-lg-3 sidebar d-md-block">
+                <h4 class="mb-4">Documentation</h4>
+                <div class="mb-4 search-bar">
+                    <input type="text" class="form-control" placeholder="Search documentation..." aria-label="Search">
+                </div>
+                <nav class="nav flex-column">
+                    <h6 class="text-muted">Getting Started</h6>
+                    <a class="nav-link active" href="#introduction">Introduction</a>
+                    <a class="nav-link" href="#installation">Installation</a>
+                    <a class="nav-link" href="#quickstart">Quick Start</a>
+                    <h6 class="text-muted mt-3">Core Concepts</h6>
+                    <a class="nav-link" href="#architecture">Architecture</a>
+                    <a class="nav-link" href="#components">Components</a>
+                    <a class="nav-link" href="#api">API Reference</a>
+                    <h6 class="text-muted mt-3">Advanced</h6>
+                    <a class="nav-link" href="#customization">Customization</a>
+                    <a class="nav-link" href="#performance">Performance</a>
+                    <a class="nav-link" href="#troubleshooting">Troubleshooting</a>
+                </nav>
+            </div>
+
+            <!-- Offcanvas Sidebar for Mobile -->
+            <div class="offcanvas offcanvas-start offcanvas-sidebar" tabindex="-1" id="sidebarOffcanvas" aria-labelledby="sidebarOffcanvasLabel">
+                <div class="offcanvas-header">
+                    <h4 class="offcanvas-title" id="sidebarOffcanvasLabel">Documentation</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <div class="mb-4 search-bar">
+                        <input type="text" class="form-control" placeholder="Search documentation..." aria-label="Search">
+                    </div>
+                    <nav class="nav flex-column">
+                        <h6 class="text-muted">Getting Started</h6>
+                        <a class="nav-link active" href="#introduction" data-bs-dismiss="offcanvas">Introduction</a>
+                        <a class="nav-link" href="#installation" data-bs-dismiss="offcanvas">Installation</a>
+                        <a class="nav-link" href="#quickstart" data-bs-dismiss="offcanvas">Quick Start</a>
+                        <h6 class="text-muted mt-3">Core Concepts</h6>
+                        <a class="nav-link" href="#architecture" data-bs-dismiss="offcanvas">Architecture</a>
+                        <a class="nav-link" href="#components" data-bs-dismiss="offcanvas">Components</a>
+                        <a class="nav-link" href="#api" data-bs-dismiss="offcanvas">API Reference</a>
+                        <h6 class="text-muted mt-3">Advanced</h6>
+                        <a class="nav-link" href="#customization" data-bs-dismiss="offcanvas">Customization</a>
+                        <a class="nav-link" href="#performance" data-bs-dismiss="offcanvas">Performance</a>
+                        <a class="nav-link" href="#troubleshooting" data-bs-dismiss="offcanvas">Troubleshooting</a>
+                    </nav>
+                </div>
+            </div>
+
+            <!-- Main Content -->
+            <div class="col-md-9 col-lg-9 content">
+                <h1 class="mb-4">Documentation Hub</h1>
+                <div class="document-card" id="introduction">
+                    <h3>Introduction</h3>
+                    <p class="meta">Last updated: June 21, 2025</p>
+                    <p>Welcome to the documentation hub. This section provides an overview of the system, its purpose, and key features. Start here to understand the basics before diving into specific topics.</p>
+                    <p>Use the sidebar to navigate through different sections, or use the search bar to find specific topics quickly.</p>
+                </div>
+                <div class="document-card" id="installation">
+                    <h3>Installation</h3>
+                    <p class="meta">Last updated: June 20, 2025</p>
+                    <p>Follow these steps to install the system:</p>
+                    <ol>
+                        <li>Download the latest version from the official repository.</li>
+                        <li>Install dependencies using your package manager.</li>
+                        <li>Configure the environment variables as described in the setup guide.</li>
+                    </ol>
+                </div>
+                <div class="document-card" id="quickstart">
+                    <h3>Quick Start</h3>
+                    <p class="meta">Last updated: June 19, 2025</p>
+                    <p>Get up and running quickly with this step-by-step guide to setting up a basic project.</p>
+                    <p>Run the following command to initialize:</p>
+                    <pre><code>npm init my-project</code></pre>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Smooth scrolling for sidebar links
+        document.querySelectorAll('.sidebar a[href^="#"], .offcanvas-sidebar a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelectorAll('.sidebar .nav-link, .offcanvas-sidebar .nav-link').forEach(link => link.classList.remove('active'));
+                this.classList.add('active');
+                const target = document.querySelector(this.getAttribute('href'));
+                target.scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+        // Search bar functionality for both sidebar and offcanvas
+        document.querySelectorAll('.search-bar input').forEach(input => {
+            input.addEventListener('input', function () {
+                const query = this.value.toLowerCase();
+                document.querySelectorAll('.document-card').forEach(card => {
+                    const text = card.textContent.toLowerCase();
+                    card.style.display = text.includes(query) ? '' : 'none';
+                });
+            });
+        });
+    </script>
+</body>
+</html>
