@@ -1,4 +1,4 @@
-# Project Setup Guide
+# Project Setup - Laravel 12 dockerize with multi env
 
 This guide provides instructions for setting up the project in different environments (local, stage, prod) using Docker Compose and Laravel. The codebase remains the same across environments, with only the database and configuration files changing.
 
