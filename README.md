@@ -2,6 +2,8 @@
 
 This guide provides instructions for setting up the project in different environments (local, stage, prod) using Docker Compose and Laravel. The codebase remains the same across environments, with only the database and configuration files changing.
 
+![Local Screenshot](docs/local-screenshot.png)
+
 ## Environments
 The project supports three environments:
 - **Local**: Uses `docker-compose.yml`
